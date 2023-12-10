@@ -6,14 +6,16 @@ from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 
 
-
 class TestFileStorage(unittest.TestCase):
 
     def setUp(self):
         """ set up the test envirenement """
-        self.file_path = "/Users/zakariagrari/Documents/ALX/AirBnB_clone/file.json"
+        self.file_path = (
+            "/Users/zakariagrari/Documents/"
+            "ALX/AirBnB_clone/file.json"
+        )
         self.file_storage = FileStorage()
-        self.file_storage.__file_path =self.file_path
+        self.file_storage.__file_path = self.file_path
 
     def tearDown(self):
         """ Clean up after the test """
@@ -22,9 +24,7 @@ class TestFileStorage(unittest.TestCase):
 
         self.file_storage._FileStorage__objects = {}
         del self.file_storage
-        
 
-    
     def test_all_empty(self):
         """ test all when storage is empty """
         objects = self.file_storage.all()
@@ -63,7 +63,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(len(objects), 4)
         self.assertIn("BaseModel {}".format(obj1.id), objects)
         self.assertIn("BaseModel {}".format(obj2.id), objects)
-               
+
     def test_doc_string(self):
         """ test doc string """
         self.assertIsNotNone(FileStorage.__doc__, True)
