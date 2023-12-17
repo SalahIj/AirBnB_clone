@@ -1,14 +1,12 @@
-footer{
-    background-color: #fff;
+footer {
+    background-color: white;
     height: 60px;
     width: 100%;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #CCCCCC;
+    position: fixed;
     bottom: 0;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-footer p{
+footer p {
     text-align: center;
+    line-height: 30px;
 }
