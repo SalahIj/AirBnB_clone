@@ -1,0 +1,13 @@
+header{
+    color: #fff;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+header div.Logo{
+    background-image: url(../images/logo.png);
+    position: absolute;
+    width: 142px;
+    height: 60px;
+    left: 20px;
+}
